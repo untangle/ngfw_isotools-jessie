@@ -4,7 +4,6 @@
 # qemu-util/wheezy-backports
 
 set -e
-set -x
 
 # constants
 CURRENT_DIR=$(dirname $0)

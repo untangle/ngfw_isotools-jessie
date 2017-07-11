@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# set -e
+set -e
 # set -x
 
 # constants
@@ -68,8 +68,8 @@ perl -i -pe 's|UUID=[^\s]+\s+none\s+swap|UUID='${SWAP_UUID}'\tnone\tswap|' /etc/
 
 # cleanup
 apt-get clean
-rm $TMP_SOURCES_LIST
-rm /tmp/$(basename $0)
+rm -f $TMP_SOURCES_LIST
+rm -f /tmp/$(basename $0)
 
 # re-enable starting of services
 rm /usr/sbin/policy-rc.d
