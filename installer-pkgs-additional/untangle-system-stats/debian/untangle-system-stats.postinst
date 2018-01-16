@@ -63,20 +63,12 @@ else
   cpuStatus=$OK
 fi
 
-if uname -a | grep -q amd64 ; then
-  if [ $memory -gt $MEMORY_GREAT_MEGS ] ; then
+if [ $memory -gt $MEMORY_GREAT_MEGS ] ; then
     memoryStatus=$GREAT
-  else
-    memoryStatus=$INSUFFICIENT_ON_64BIT
-  fi
-else
-  if [ $memory -gt $MEMORY_GREAT_MEGS ] ; then
-    memoryStatus=$GREAT
-  elif [ $memory -lt $MEMORY_MIN_MEGS ] ; then
+elif [ $memory -lt $MEMORY_MIN_MEGS ] ; then
     memoryStatus=$INSUFFICIENT
-  else
+else
     memoryStatus=$OK
-  fi
 fi
 
 # if [ $diskSpace -gt $DISK_GREAT_GIGS ] ; then
