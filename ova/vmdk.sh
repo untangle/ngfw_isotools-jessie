@@ -37,7 +37,12 @@ fi
 rmmod nbd || true
 modprobe nbd max_part=32
 
-NUM=0
+case $FLAVOR in
+  adtran) NUM=3 ;;
+  apc) NUM=6 ;;
+  untangle) NUM=9 ;;
+  *) NUM=0 ;;
+esac
 while [[ -e /var/lock/qemu-nbd-nbd${NUM} ]] ; do
   NUM=$(( NUM + 1 ))
 done
