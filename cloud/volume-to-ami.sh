@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VENDOR=untangle-ngfw
+
 # runtime overridable defaults:
 AMI_VIRT_TYPE=hvm
 AMI_ARCH=x86_64
@@ -126,8 +128,8 @@ json_body=$(mktemp) || exit 1
 cat > "$json_body" <<EOF 
 {
     "DryRun": false, 
-    "Name": "debian-${AMI_RELEASE}-${AMI_VIRT_TYPE}-${AMI_ARCH}-${AMI_VOLTYPE}-$img_stamp",
-    "Description": "FAI Debian image", 
+    "Name": "${VENDOR}-${AMI_RELEASE}-${AMI_VIRT_TYPE}-${AMI_ARCH}-${AMI_VOLTYPE}-$img_stamp",
+    "Description": "${VENDOR}-${AMI_RELEASE}",
     "Architecture": "$AMI_ARCH",
     "RootDeviceName": "$AMI_ROOTDEV",
     "BlockDeviceMappings": [
