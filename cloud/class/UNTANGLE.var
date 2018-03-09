@@ -1,7 +1,0 @@
-untangle_mirror=http://package-server.untangle.int/public/jessie
-untangle_release=current
-release=jessie
-apt_cdn=http://ftp.us.debian.org
-FAI_DEBOOTSTRAP="$release $apt_cdn/debian/"
-KEYMAP=us-latin1
-CONSOLEFONT=
