@@ -103,7 +103,6 @@
       <Item>
         <rasd:AddressOnParent>7</rasd:AddressOnParent>
         <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
-        <rasd:Connection>External</rasd:Connection>
         <rasd:Description>PCNet32 ethernet adapter on "External"</rasd:Description>
         <rasd:ElementName>Network adapter 1</rasd:ElementName>
         <rasd:InstanceID>9</rasd:InstanceID>
@@ -115,7 +114,6 @@
       <Item>
         <rasd:AddressOnParent>8</rasd:AddressOnParent>
         <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
-        <rasd:Connection>Internal</rasd:Connection>
         <rasd:Description>PCNet32 ethernet adapter on "Internal"</rasd:Description>
         <rasd:ElementName>Network adapter 2</rasd:ElementName>
         <rasd:InstanceID>10</rasd:InstanceID>
