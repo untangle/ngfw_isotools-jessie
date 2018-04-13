@@ -95,7 +95,7 @@ fi
 
 # copy 2nd stage install script in chroot, and run it
 cp ${CURRENT_DIR}/${SECOND_STAGE_SCRIPT} ${CHROOT_DIR}/tmp/
-chroot ${CHROOT_DIR} /tmp/$(basename ${SECOND_STAGE_SCRIPT}) $REPOSITORY $DISTRIBUTION $KERNEL_VERSION $NAME
+chroot ${CHROOT_DIR} /tmp/$(basename ${SECOND_STAGE_SCRIPT}) $REPOSITORY $DISTRIBUTION $NAME
 
 # grab TRX
 cp ${CHROOT_DIR}/boot/vmlinu*trx tmp/

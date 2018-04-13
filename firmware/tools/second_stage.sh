@@ -8,8 +8,7 @@ TMP_SOURCES_LIST="/etc/apt/sources.list.d/tmp.list"
 # CL args
 REPOSITORY=$1
 DISTRIBUTION=$2
-KERNEL_VERSION=$3
-NAME=$4
+NAME=$3
 
 # disable starting of services
 echo exit 101 > /usr/sbin/policy-rc.d
